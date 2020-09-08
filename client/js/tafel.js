@@ -24,6 +24,20 @@ bevestigbuttonhandler = function (bonnen) {
     "Uw bestelling is succesvol ontvangen, dit wordt zodadelijk naar uw tafel gebracht!";
   child2.setAttribute("class", "confirmtext");
   parent.appendChild(child2);
+
+  let child3 = document.createElement("img");
+  child3.setAttribute("src", "../../afbeeldingen/banner.png");
+  child3.setAttribute("class", "banner");
+  parent.appendChild(child3);
+
+  //reloadbutton
+  let button = document.createElement("button");
+  button.setAttribute("class", "bestelbutton");
+  button.innerHTML = "Bestel opnieuw";
+  button.onclick = () => {
+    annuleerbuttonhandler();
+  };
+  parent.appendChild(button);
 };
 
 annuleerbuttonhandler = function () {
@@ -206,6 +220,10 @@ populateList = function (artikelen) {
       p1.innerHTML = soorten[j].naam;
       p1.setAttribute("class", "name");
       div3.appendChild(p1);
+      let p3 = document.createElement("p");
+      p3.innerHTML = soorten[j].beschrijving;
+      p3.setAttribute("class", "description");
+      div3.appendChild(p3);
       let p2 = document.createElement("p");
       p2.innerHTML = soorten[j].prijs + " bonnen";
       p2.setAttribute("class", "price");

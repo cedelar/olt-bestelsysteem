@@ -13,6 +13,7 @@ class Bestellingcontroller {
         prijs: delen[1],
         link: "../../afbeeldingen/" + delen[0] + ".jpg",
         categorie: delen[2],
+        beschrijving: delen[3],
       });
     });
     console.log(this._artikelen);
