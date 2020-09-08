@@ -55,7 +55,6 @@ annuleerbuttonhandler = function () {
 bestelbuttonhandler = function (artikelen) {
   //save bestelling
   for (let i = 0; i < artikelen.length; i++) {
-    console.log("input-" + artikelen[i].naam);
     let input = document.getElementById(
       "input-" + artikelen[i].naam.replace(/\s/g, "-")
     ).value;
@@ -71,7 +70,6 @@ bestelbuttonhandler = function (artikelen) {
     //update bevestingingveld
     let parent = document.getElementById("contain");
     parent.innerHTML = "";
-    console.log(bestelling);
 
     let prijsCounter = 0;
 
@@ -190,9 +188,7 @@ bestelbuttonhandler = function (artikelen) {
 };
 
 populateList = function (artikelen) {
-  console.log(artikelen);
   let categories = Array.from(new Set(artikelen.map((art) => art.categorie)));
-  console.log(categories);
 
   let parent = document.getElementById("contain");
   parent.innerHTML = "";

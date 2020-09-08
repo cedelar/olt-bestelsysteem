@@ -1,16 +1,15 @@
 // Get WebSocket
 var socket = io();
 
+let queryString = window.location.search;
+let code = new URLSearchParams(queryString).get("code");
+
 klaarhandler = function (bestelling) {
-  console.log(bestelling);
   console.log(" is klaar");
   socket.emit("observermessage", bestelling);
 };
 
 populateList = function (bestellingen) {
-  console.log("Test.");
-  console.log(bestellingen);
-
   let parent = document.getElementById("contain");
   parent.innerHTML = "";
   let child = document.createElement("h1");
@@ -32,7 +31,6 @@ populateList = function (bestellingen) {
 
     let gc = document.createElement("div");
     gc.setAttribute("class", "grid-container");
-    console.log(bestellingen[i].bestelling.length);
     for (let j = 0; j < bestellingen[i].bestelling.length; j++) {
       //empty
       let div0 = document.createElement("div");
@@ -86,5 +84,7 @@ populateList = function (bestellingen) {
 // Join a channel
 socket.emit("join", "observer");
 socket.on("servermessage", (msg) => {
-  populateList(msg);
+  if (code == msg.code) {
+    populateList(msg.data);
+  }
 });

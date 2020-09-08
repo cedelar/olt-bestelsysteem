@@ -13,6 +13,8 @@ console.log(path.resolve("client"));
 const pkey1 = 614253102;
 const pkey2 = 111;
 
+const code = 2626110280;
+
 //data
 const datawrapper = new bestellingcontroller();
 fs.readFile("server/artikelen.txt", "utf8", (err, data) => {
@@ -45,7 +47,10 @@ observerHandler = function (socket, room) {
     datawrapper.removeBestelling(msg);
     socket.emit("servermessage", datawrapper.getBestellingen());
   });
-  socket.emit("servermessage", datawrapper.getBestellingen());
+  socket.emit("servermessage", {
+    data: datawrapper.getBestellingen(),
+    code: code,
+  });
 };
 
 io.on("connection", (socket) => {
