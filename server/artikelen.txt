@@ -16,7 +16,7 @@ Tank 7  3  Zware Bieren
 Cherry Chouffe  4  Zware Bieren
 Leffe (Blond)  3  Zware Bieren
 Leffe (Donker)  3  Zware Bieren
-Hamburger  3  Eten
+hamburger  3  Eten
 Cheeseburger  4  Eten
 Nachos  5  Eten
 Partysnacks 8st.  4  Eten
