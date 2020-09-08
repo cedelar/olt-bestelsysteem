@@ -33,7 +33,10 @@ const io = socketIO(server);
 tafelHandler = function (socket, room) {
   socket.on("tafelmessage", (msg) => {
     datawrapper.addBestelling(msg);
-    io.to("observer").emit("servermessage", datawrapper.getBestellingen());
+    io.to("observer").emit("servermessage", {
+      data: datawrapper.getBestellingen(),
+      code: code,
+    });
   });
   socket.emit("servermessage", {
     data: datawrapper.getArtikelen(),
