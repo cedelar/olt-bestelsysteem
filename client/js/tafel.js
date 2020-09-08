@@ -4,7 +4,15 @@ var socket = io();
 let bestelling = [];
 let queryString = window.location.search;
 let tafel = new URLSearchParams(queryString).get("id");
-console.log(tafel);
+let controle = new URLSearchParams(queryString).get("c");
+
+windowcontrole = function (k1, k2) {
+  if (controle == (k1 % tafel) * k2) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 bevestigbuttonhandler = function (bonnen) {
   socket.emit("tafelmessage", {
@@ -251,8 +259,8 @@ populateList = function (artikelen) {
 socket.emit("join", "tafel");
 socket.on("servermessage", (msg) => {
   if (!(msg.size === 0)) {
-    if (tafel) {
-      populateList(msg);
+    if (windowcontrole(msg.key1, msg.key2)) {
+      populateList(msg.data);
     }
   }
 });

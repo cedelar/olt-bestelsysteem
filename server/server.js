@@ -10,6 +10,9 @@ const bestellingcontroller = require("./bestellingcontroller.js")
 const PORT = process.env.PORT || 3000;
 console.log(path.resolve("client"));
 
+const pkey1 = 614253102;
+const pkey2 = 111;
+
 //data
 const datawrapper = new bestellingcontroller();
 fs.readFile("server/artikelen.txt", "utf8", (err, data) => {
@@ -30,7 +33,11 @@ tafelHandler = function (socket, room) {
     datawrapper.addBestelling(msg);
     io.to("observer").emit("servermessage", datawrapper.getBestellingen());
   });
-  socket.emit("servermessage", datawrapper.getArtikelen());
+  socket.emit("servermessage", {
+    data: datawrapper.getArtikelen(),
+    key1: pkey1,
+    key2: pkey2,
+  });
 };
 
 observerHandler = function (socket, room) {
