@@ -45,7 +45,10 @@ tafelHandler = function (socket, room) {
 observerHandler = function (socket, room) {
   socket.on("observermessage", (msg) => {
     datawrapper.removeBestelling(msg);
-    socket.emit("servermessage", datawrapper.getBestellingen());
+    socket.emit("servermessage", {
+      data: datawrapper.getBestellingen(),
+      code: code,
+    });
   });
   socket.emit("servermessage", {
     data: datawrapper.getBestellingen(),
