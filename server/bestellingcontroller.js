@@ -7,7 +7,7 @@ class Bestellingcontroller {
     this._artikelen = new Array();
     let artikellijnen = data.split("\r\n");
     artikellijnen.forEach((element) => {
-      let delen = element.split(" ");
+      let delen = element.split("  ");
       this._artikelen.push({
         naam: delen[0],
         prijs: delen[1],

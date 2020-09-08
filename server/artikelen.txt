@@ -1,5 +1,30 @@
-pint 2 drank
-wijn 3 drank
-palm 2 drank
-desperados 4 drank
-nachos 3 eten
+Water (Plat)  2  Alcoholvrij
+Water (Bruis)  2  Alcoholvrij
+Cola  2  Alcoholvrij
+Limonade  2  Alcoholvrij
+Ice-tea  2  Alcoholvrij
+Koffie  2  Alcoholvrij
+Thee  2  Alcoholvrij
+Mocktail  5  Alcoholvrij
+Maes Pils  2  Bier
+Palm  2  Bier
+Desperados  4  Bier
+Kemel (Blond)  3  Bier
+Kemel (Donker)  3  Bier
+La Chouffe  4  Zware Bieren
+Tank 7  3  Zware Bieren
+Cherry Chouffe  4  Zware Bieren
+Leffe (Blond)  3  Zware Bieren
+Leffe (Donker)  3  Zware Bieren
+Hamburger  3  Eten
+Cheeseburger  4  Eten
+Nachos  5  Eten
+Partysnacks 8st.  4  Eten
+Kaasballetjes  4  Eten
+Lays Naturel  2  Eten
+Lays Paprika  2  Eten
+Kaasplankje  4  Eten
+Salamiplankje  4  Eten
+Plankje Gemengd  4  Eten
+Lookbroodje  3  Eten
+Pizzabaguette  3  Eten
