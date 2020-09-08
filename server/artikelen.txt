@@ -1,0 +1,5 @@
+pint 2 drank
+wijn 3 drank
+palm 2 drank
+desperados 4 drank
+nachos 3 eten

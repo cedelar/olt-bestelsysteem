@@ -1,0 +1,85 @@
+body {
+  /* background-image: url("../images/background/black_wood.png");
+  
+    background-position: center center;
+    background-size: cover; */
+
+  /* zoom: 225%; */
+}
+
+p.name {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+p.price {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+img.artikel {
+  margin-top: 30px;
+  width: 100px;
+  height: 100px;
+}
+
+pre {
+  margin-top: 5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+input {
+  height: 20px;
+  width: 30px;
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 120px 50px 150px;
+  grid-gap: 15px 0px;
+  margin-left: 25px;
+}
+
+.grid-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.bestelbutton {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 250px 100px 200px;
+  grid-gap: 15px 0px;
+  margin-left: 25px;
+}
+
+.grid-item-2 {
+  border-bottom: 1px solid #ccc;
+}
+
+p.titel {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.grid-item-3 {
+  border-bottom: 5px solid #ccc;
+}
+
+.grid-item-4 {
+  /* border-top: 5px solid #ccc; */
+}
+
+p.confirmtext {
+  font-weight: bold;
+  font-size: 20px;
+}
