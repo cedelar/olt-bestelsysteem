@@ -2,21 +2,33 @@ Water (Plat)  2  Alcoholvrij
 Water (Bruis)  2  Alcoholvrij
 Cola  2  Alcoholvrij
 Limonade  2  Alcoholvrij
-Ice-tea  2  Alcoholvrij
+Ice Tea  2  Alcoholvrij
 Koffie  2  Alcoholvrij
 Thee  2  Alcoholvrij
 Mocktail  5  Alcoholvrij
-Maes Pils  2  Bier
-Palm  2  Bier
-Desperados  4  Bier
-Kemel (Blond)  3  Bier
-Kemel (Donker)  3  Bier
-La Chouffe  4  Zware Bieren
-Tank 7  3  Zware Bieren
-Cherry Chouffe  4  Zware Bieren
-Leffe (Blond)  3  Zware Bieren
-Leffe (Donker)  3  Zware Bieren
-hamburger  3  Eten
+Maes Pils  2  Bieren op Vat
+Kemel (Blond)  3  Bieren op Vat
+Palm  2  Bieren op Fles
+Desperados  4  Bieren op Fles
+Kemel (Donker)  3  Bieren op Fles
+Witte Wijn (Glas)  3  Wijn
+Witte Wijn (Fles)  14  Wijn
+Rosé Wijn (Glas)  3  Wijn
+Rosé Wijn (Fles)  14  Wijn
+La Chouffe  4  Bieren op Vat
+Tank 7  3  Bieren op Vat
+Cherry Chouffe  4  Bieren op Vat
+Leffe (Blond)  3  Bieren op Fles
+Leffe (Donker)  3  Bieren op Fles
+Troubadour (Blond)  4  Bieren op Vat
+Troubadour (Magma)  4  Bieren op Fles
+Kasteelbier (Rouge)  4  Bieren op Fles
+Duvel  4  Bieren op Fles
+Sinpalsken (Blond)  4  Bieren op Fles
+Sinpalsken (Donker)  4  Bieren op Fles
+Grimbergen (Blond)  4  Bieren op Fles
+Grimbergen (Donker)  4  Bieren op Fles
+Hamburger  3  Eten
 Cheeseburger  4  Eten
 Nachos  5  Eten
 Partysnacks 8st.  4  Eten
