@@ -33,7 +33,10 @@ annuleerbuttonhandler = function () {
 bestelbuttonhandler = function (artikelen) {
   //save bestelling
   for (let i = 0; i < artikelen.length; i++) {
-    let input = document.getElementById("input-" + artikelen[i].naam).value;
+    console.log("input-" + artikelen[i].naam);
+    let input = document.getElementById(
+      "input-" + artikelen[i].naam.replace(/\s/g, "-")
+    ).value;
     if (input > 0) {
       bestelling.push({
         artikel: artikelen[i],
@@ -210,7 +213,7 @@ populateList = function (artikelen) {
       let pre = document.createElement("pre");
       pre.innerHTML =
         "Aantal: <input id=input-" +
-        soorten[j].naam +
+        soorten[j].naam.replace(/\s/g, "-") +
         ' type="number" value="0" min="0"> ';
       div3.appendChild(pre);
       gc.appendChild(div3);
