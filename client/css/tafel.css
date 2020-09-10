@@ -17,7 +17,7 @@ p.name {
   margin-bottom: 5px;
 }
 
-p.price {
+.price {
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -97,4 +97,15 @@ p.confirmtext {
 
 img.banner {
   width: 100%;
+}
+
+p.name-2 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.price-2 {
+  font-size: 30px;
+  margin-bottom: 8px;
 }

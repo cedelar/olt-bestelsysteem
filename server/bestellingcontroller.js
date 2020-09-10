@@ -14,6 +14,8 @@ class Bestellingcontroller {
         link: "../../afbeeldingen/" + delen[0] + ".jpg",
         categorie: delen[2],
         beschrijving: delen[3],
+        opties: delen[4],
+        beschikbaar: "Ja",
       });
     });
     console.log(this._artikelen);
@@ -33,6 +35,12 @@ class Bestellingcontroller {
     }
     console.log("-----------------------------");
     this._bestellingen.push(data);
+  }
+
+  setBeschikbaar(naam, value) {
+    console.log(naam + " " + value);
+    this._artikelen.filter((a) => a.naam === naam)[0].beschikbaar = value;
+    console.log(this._artikelen.filter((a) => a.naam === naam)[0].beschikbaar);
   }
 
   removeBestelling(bestelling) {

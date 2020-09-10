@@ -29,7 +29,7 @@ bevestigbuttonhandler = function (bonnen) {
 
   let child2 = document.createElement("p");
   child2.innerHTML =
-    "Uw bestelling is succesvol ontvangen, dit wordt zodadelijk naar uw tafel gebracht!";
+    "Uw bestelling is succesvol ontvangen, dit wordt zodadelijk naar uw tafel gebracht. Gelieve het correcte aantal bonnen klaar te leggen!";
   child2.setAttribute("class", "confirmtext");
   parent.appendChild(child2);
 
@@ -55,14 +55,32 @@ annuleerbuttonhandler = function () {
 bestelbuttonhandler = function (artikelen) {
   //save bestelling
   for (let i = 0; i < artikelen.length; i++) {
-    let input = document.getElementById(
-      "input-" + artikelen[i].naam.replace(/\s/g, "-")
-    ).value;
-    if (input > 0) {
-      bestelling.push({
-        artikel: artikelen[i],
-        aantal: input,
-      });
+    if (artikelen[i].beschikbaar === "Ja") {
+      let input = document.getElementById(
+        "input-" + artikelen[i].naam.replace(/\s/g, "-")
+      ).value;
+      if (input > 0) {
+        let checkedOpties = [];
+        if (artikelen[i].opties) {
+          let opties = artikelen[i].opties.split(" ");
+          for (let z = 0; z < opties.length; z++) {
+            let c = document.getElementById(
+              "opties-" +
+                artikelen[i].naam.replace(/\s/g, "-") +
+                "-" +
+                opties[z]
+            );
+            if (c.checked == true) {
+              checkedOpties.push(opties[z]);
+            }
+          }
+        }
+        bestelling.push({
+          artikel: artikelen[i],
+          aantal: input,
+          opties: checkedOpties,
+        });
+      }
     }
   }
 
@@ -111,16 +129,23 @@ bestelbuttonhandler = function (artikelen) {
       let div1 = document.createElement("div");
       div1.setAttribute("class", "grid-item-2");
       let p = document.createElement("p");
-      p.setAttribute("class", "name");
+      p.setAttribute("class", "name-2");
       p.innerHTML = bestelling[i].artikel.naam;
       div1.appendChild(p);
+      //opties
+      for (let j = 0; j < bestelling[i].opties.length; j++) {
+        let p7 = document.createElement("p");
+        p7.setAttribute("class", "price-2");
+        p7.innerHTML = bestelling[i].opties[j];
+        div1.appendChild(p7);
+      }
       gc.appendChild(div1);
 
       //aantal
       let div2 = document.createElement("div");
       div2.setAttribute("class", "grid-item-2");
       let p2 = document.createElement("p");
-      p2.setAttribute("class", "price");
+      p2.setAttribute("class", "price-2");
       p2.innerHTML = bestelling[i].aantal + "x";
       div2.appendChild(p2);
       gc.appendChild(div2);
@@ -129,7 +154,7 @@ bestelbuttonhandler = function (artikelen) {
       let div3 = document.createElement("div");
       div3.setAttribute("class", "grid-item-2");
       let p3 = document.createElement("p");
-      p3.setAttribute("class", "price");
+      p3.setAttribute("class", "price-2");
       let prijs = bestelling[i].aantal * bestelling[i].artikel.prijs;
       prijsCounter += prijs;
       if (prijs === 1) {
@@ -224,20 +249,51 @@ populateList = function (artikelen) {
       p1.innerHTML = soorten[j].naam;
       p1.setAttribute("class", "name");
       div3.appendChild(p1);
-      let p3 = document.createElement("p");
-      p3.innerHTML = soorten[j].beschrijving;
-      p3.setAttribute("class", "description");
-      div3.appendChild(p3);
-      let p2 = document.createElement("p");
-      p2.innerHTML = soorten[j].prijs + " bonnen";
-      p2.setAttribute("class", "price");
-      div3.appendChild(p2);
-      let pre = document.createElement("pre");
-      pre.innerHTML =
-        "Aantal: <input id=input-" +
-        soorten[j].naam.replace(/\s/g, "-") +
-        ' type="number" value="0" min="0"> ';
-      div3.appendChild(pre);
+      if (soorten[j].beschikbaar === "Ja") {
+        let p3 = document.createElement("p");
+        p3.innerHTML = soorten[j].beschrijving;
+        p3.setAttribute("class", "description");
+        div3.appendChild(p3);
+        let p2 = document.createElement("p");
+        p2.innerHTML = soorten[j].prijs + " bonnen";
+        p2.setAttribute("class", "price");
+        div3.appendChild(p2);
+        let pre = document.createElement("pre");
+        pre.innerHTML =
+          "Aantal: <input id=input-" +
+          soorten[j].naam.replace(/\s/g, "-") +
+          ' type="number" value="0" min="0"> ';
+        div3.appendChild(pre);
+        //options
+        if (soorten[j].opties) {
+          let p4 = document.createElement("p");
+          p4.innerHTML = "Opties:";
+          p4.setAttribute("class", "price");
+          div3.appendChild(p4);
+
+          let opties = soorten[j].opties.split(" ");
+          for (let z = 0; z < opties.length; z++) {
+            let c = document.createElement("input");
+            c.setAttribute("type", "checkbox");
+            c.setAttribute(
+              "id",
+              "opties-" + soorten[j].naam.replace(/\s/g, "-") + "-" + opties[z]
+            );
+            div3.appendChild(c);
+            let p5 = document.createElement("label");
+            p5.innerHTML = opties[z];
+            p5.setAttribute("class", "price");
+            div3.appendChild(p5);
+            let br = document.createElement("br");
+            div3.appendChild(br);
+          }
+        }
+      } else {
+        let p3 = document.createElement("p");
+        p3.innerHTML = "Uitverkocht";
+        p3.setAttribute("class", "description");
+        div3.appendChild(p3);
+      }
       gc.appendChild(div3);
     }
     parent.appendChild(gc);

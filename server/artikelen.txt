@@ -28,13 +28,11 @@ Sinpalsken (Blond)  4  Bieren op Fles  33cl 8.5%
 Sinpalsken (Donker)  4  Bieren op Fles  33cl 8.5%
 Grimbergen (Blond)  4  Bieren op Fles  33cl 6.7%
 Grimbergen (Donker)  4  Bieren op Fles  33cl 6.5%
-Hamburger  3  Eten  Broodje, Burger, Ajuin, Saus
-Cheeseburger  4  Eten  Broodje, Burger, Kaas, Ajuin, Saus
-Nachos  5  Eten  
-Partysnacks  4  Eten  8 stuks
-Kaasballetjes  4  Eten  8 stuks
-Lays Naturel  2  Eten  40g
-Lays Paprika  2  Eten  40g
+Hamburger  4  Eten  Broodje, Burger  Kaas Ajuin Majo Ketchup Curryketchup
+Nachos  5  Eten   
+Partysnacks  4  Eten  8 stuks  Majo Ketchup Curryketchup
+Kaasballetjes  4  Eten  8 stuks  Majo Ketchup Curryketchup
+Lays Chips  2  Eten  40g - Gelieve een smaak te kiezen  Naturel Paprika Salt&Peper Pickels
 Kaasplankje  4  Eten   
 Salamiplankje  4  Eten   
 Plankje Gemengd  4  Eten   

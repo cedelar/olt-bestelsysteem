@@ -59,6 +59,20 @@ observerHandler = function (socket, room) {
   });
 };
 
+uitverkochtHandler = function (socket, room) {
+  socket.on("uitverkochtmessage", (msg) => {
+    datawrapper.setBeschikbaar(msg.product, msg.value);
+    io.to("uitverkocht").emit("servermessage", {
+      data: datawrapper.getArtikelen(),
+      code: code,
+    });
+  });
+  socket.emit("servermessage", {
+    data: datawrapper.getArtikelen(),
+    code: code,
+  });
+};
+
 io.on("connection", (socket) => {
   socket.on("join", (room) => {
     socket.join(room);
@@ -70,6 +84,11 @@ io.on("connection", (socket) => {
     if (room === "observer") {
       console.log("Join observer");
       observerHandler(socket, room);
+    }
+
+    if (room === "uitverkocht") {
+      console.log("Join uitverkocht");
+      uitverkochtHandler(socket, room);
     }
   });
 });

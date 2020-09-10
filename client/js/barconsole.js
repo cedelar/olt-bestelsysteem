@@ -44,6 +44,13 @@ populateList = function (bestellingen) {
       p.setAttribute("class", "name");
       p.innerHTML = bestellingen[i].bestelling[j].artikel.naam;
       div1.appendChild(p);
+      //opties
+      for (let z = 0; z < bestellingen[i].bestelling[j].opties.length; z++) {
+        let p7 = document.createElement("p");
+        p7.setAttribute("class", "optie");
+        p7.innerHTML = bestellingen[i].bestelling[j].opties[z];
+        div1.appendChild(p7);
+      }
       gc.appendChild(div1);
 
       //aantal
