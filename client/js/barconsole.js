@@ -72,7 +72,11 @@ populateList = function (bestellingen) {
     div1.setAttribute("class", "grid-item-totaal");
     let p = document.createElement("p");
     p.setAttribute("class", "totaal");
-    p.innerHTML = "Bonnen:";
+
+    //TODO: Terugzetten
+    // p.innerHTML = "Bonnen:";
+    p.innerHTML = "Euro:";
+
     div1.appendChild(p);
     gc.appendChild(div1);
 
@@ -81,7 +85,11 @@ populateList = function (bestellingen) {
     div2.setAttribute("class", "grid-item-totaal");
     let p2 = document.createElement("p");
     p2.setAttribute("class", "totaal");
-    p2.innerHTML = bestellingen[i].prijs;
+
+    //TODO: Terugzetten
+    // p2.innerHTML = bestellingen[i].prijs;
+    p2.innerHTML = bestellingen[i].prijs / 100;
+
     div2.appendChild(p2);
     gc.appendChild(div2);
     parent.appendChild(gc);
