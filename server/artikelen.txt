@@ -7,7 +7,7 @@ Fruitsap  2  Alcoholvrij  20cl
 Koffie  2  Alcoholvrij  Met koekje, melk en suiker
 Thee  2  Alcoholvrij  Met koekje, melk en suiker
 Maes 0.0  2  Alcoholvrij  25cl
-Sportzot  3  Alcoholvrij  20cl
+Sportzot  3  Alcoholvrij  33cl
 Mocktail  5  Alcoholvrij  33cl
 Maes  2  Bieren op Vat  25cl 5.2% 
 La Chouffe  3  Bieren op Vat  33cl 8%
@@ -40,7 +40,7 @@ Pizza Baguettes  3  Eten  2 stuks
 Lookbrood  3  Eten  
 Buggles met Geitenkaas  4  Eten  
 Portie Gemengd  4  Eten  
-Hamburger  4  Eten  Broodje, Burger  Kaas Ajuin Majo Ketchup Curryketchup
-Veggieburger  4  Eten  Broodje, Burger  Kaas Ajuin Majo Ketchup Curryketchup
+Hamburger  4  Eten  Broodje, Burger, Sla, Tomaat, Saus naar keuze  Kaas Ajuin Majo Ketchup Curryketchup
+Veggieburger  4  Eten  Broodje, Burger, Sla, Tomaat, Saus naar keuze  Kaas Ajuin Majo Ketchup Curryketchup
 Nachos  5  Eten   
 Partysnacks  5  Eten  20 stuks  Majo Ketchup Curryketchup
