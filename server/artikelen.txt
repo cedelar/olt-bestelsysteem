@@ -1,24 +1,46 @@
-Heiniken  50  Uitverkoop  33cl 5%
-Appelbier  50  Uitverkoop  25cl 3.5%
-Kemel (Donker)  100  Uitverkoop  33cl 7%
-Waterloo (Tripel)  100  Uitverkoop  33cl 7.5%
-Affligem (Tripel)  100  Uitverkoop  33cl 9%
-Affligem (Dubbel)  100  Uitverkoop  33cl 6.8%
-Maes  80  Bier  25cl 5.2%
-Maes Radler  80  Bier  25cl 2%
-Palm  80  Bier  25cl 5.2%
-Vedett  160  Bier  33cl 5.2%
-Kasteelbier (Rouge)  160  Zwaar Bier  33cl 8%
-Duvel  160  Zwaar Bier  33cl 8.5%
-Augustijn Blond  160  Zwaar Bier  33cl 7.5%
-Chimay (Blauw)  160  Zwaar Bier  33cl 9%
-Chimay (Tripel)  160  Zwaar Bier  33cl 8%
-Maredsous (Blond)  160  Zwaar Bier  33cl 6%
-Maes 0,0  80  Alcoholvrij  25cl 0%
-Water (Plat)  80  Alcoholvrij  20cl
-Water (Bruis)  80  Alcoholvrij  20cl
-Coca Cola  80  Alcoholvrij  20cl
-Coca Cola Zero  80  Alcoholvrij  20cl
-Fanta  80  Alcoholvrij  20cl
-Ice Tea  80  Alcoholvrij  20cl
-Lays Chips  80  Eten  40g - Gelieve een smaak te kiezen  Naturel Paprika Salt&Peper Pickels Grills Ketchup
+Ordal Plat  2  Alcoholvrij  20cl
+Ordal Bruis  2  Alcoholvrij  20cl
+Cola  2  Alcoholvrij  20cl
+Cola Zero  2  Alcoholvrij  20cl
+Ice Tea  2  Alcoholvrij  20cl
+Fruitsap  2  Alcoholvrij  20cl
+Koffie  2  Alcoholvrij  Met koekje, melk en suiker
+Thee  2  Alcoholvrij  Met koekje, melk en suiker
+Maes 0.0  2  Alcoholvrij  25cl
+Sportzot  3  Alcoholvrij  20cl
+Mocktail  5  Alcoholvrij  33cl
+Maes  2  Bieren op Vat  25cl 5.2% 
+La Chouffe  3  Bieren op Vat  33cl 8%
+Cherry Chouffe  3  Bieren op Vat  33cl 8%
+Tank 7  3  Bieren op Vat  33cl 8.5%
+Palm  2  Bieren op Fles  25cl 5.2%
+Strongbow Apple  3  Bieren op Fles  33cl 4.5%
+Strongbow Redberries  3  Bieren op Fles  33cl 4.5%
+Kemel Blond  3  Bieren op Fles  33cl 7%
+Kemel Donker  3  Bieren op Fles  33cl 7%
+Achel Blond  3  Bieren op Fles  33cl 8%
+Dulle Wies  3  Bieren op Fles  33cl 7%
+Duvel  3  Bieren op Fles  33cl 8.5%
+Brugse Zot  3  Bieren op Fles  33cl 6%
+Affligem Bruin  3  Bieren op Fles  33cl 6.8%
+Westmalle Dubbel  3  Bieren op Fles  33cl 7%
+Troubadour Blond  3  Bieren op Fles  33cl 6.5%
+Affligem Tripel  4  Bieren op Fles  33cl 9%
+Westmalle Tripel  4  Bieren op Fles  33cl 9.5%
+Troubadour Magma  4  Bieren op Fles  33cl 9%
+Witte Wijn (Glas)  3  Wijn  15cl ?%
+Witte Wijn (Fles)  12  Wijn  75cl ?%
+Rosé Wijn (Glas)  3  Wijn  15cl ?%
+Rosé Wijn (Fles)  12  Wijn  75cl ?%
+Rode Wijn (Glas)  3  Wijn  15cl ?%
+Rode Wijn (Fles)  12  Wijn  75cl ?%
+Ijsje  2  Eten  
+Mini Loempia's  3  Eten  5 stuks
+Pizza Baguettes  3  Eten  2 stuks
+Lookbrood  3  Eten  
+Buggles met Geitenkaas  4  Eten  
+Portie Gemengd  4  Eten  
+Hamburger  4  Eten  Broodje, Burger  Kaas Ajuin Majo Ketchup Curryketchup
+Veggieburger  4  Eten  Broodje, Burger  Kaas Ajuin Majo Ketchup Curryketchup
+Nachos  5  Eten   
+Partysnacks  5  Eten  20 stuks  Majo Ketchup Curryketchup

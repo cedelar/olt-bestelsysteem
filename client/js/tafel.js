@@ -6,6 +6,8 @@ let queryString = window.location.search;
 let tafel = new URLSearchParams(queryString).get("id");
 let controle = new URLSearchParams(queryString).get("c");
 
+let maxBestelling = 999;
+
 windowcontrole = function (k1, k2) {
   if (controle == (k1 % tafel) * k2) {
     return true;
@@ -56,9 +58,15 @@ bestelbuttonhandler = function (artikelen) {
   //save bestelling
   for (let i = 0; i < artikelen.length; i++) {
     if (artikelen[i].beschikbaar === "Ja") {
-      let input = document.getElementById(
-        "input-" + artikelen[i].naam.replace(/\s/g, "-")
-      ).value;
+      let input = parseInt(
+        document.getElementById(
+          "input-" + artikelen[i].naam.replace(/\s/g, "-")
+        ).value,
+        10
+      );
+      if (input > maxBestelling) {
+        input = 0;
+      }
       if (input > 0) {
         let checkedOpties = [];
         if (artikelen[i].opties) {
@@ -157,14 +165,11 @@ bestelbuttonhandler = function (artikelen) {
       p3.setAttribute("class", "price-2");
       let prijs = bestelling[i].aantal * bestelling[i].artikel.prijs;
       prijsCounter += prijs;
-
-      //TODO: terugzetten
-      /* if (prijs === 1) {
+      if (prijs === 1) {
         p3.innerHTML = prijs + " bon";
       } else {
         p3.innerHTML = prijs + " bonnen";
-      } */
-      p3.innerHTML = prijs / 100 + " euro";
+      }
 
       div3.appendChild(p3);
       gc.appendChild(div3);
@@ -189,11 +194,7 @@ bestelbuttonhandler = function (artikelen) {
     div6.setAttribute("class", "grid-item-4");
     let p6 = document.createElement("p");
     p6.setAttribute("class", "titel");
-
-    //TODO: Terugzetten
-    // p6.innerHTML = prijsCounter + " bonnen";
-    p6.innerHTML = prijsCounter / 100 + " euro";
-
+    p6.innerHTML = prijsCounter + " bonnen";
     div6.appendChild(p6);
     gc.appendChild(div6);
     parent.appendChild(gc);
@@ -263,11 +264,7 @@ populateList = function (artikelen) {
         p3.setAttribute("class", "description");
         div3.appendChild(p3);
         let p2 = document.createElement("p");
-
-        //TODO: terugzetten
-        // p2.innerHTML = soorten[j].prijs + " bonnen";
-        p2.innerHTML = soorten[j].prijs / 100 + " euro";
-
+        p2.innerHTML = soorten[j].prijs + " bonnen";
         p2.setAttribute("class", "price");
         div3.appendChild(p2);
         let pre = document.createElement("pre");
