@@ -1,0 +1,9 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+img {
+  padding-top: 10%;
+  width: 90%;
+}

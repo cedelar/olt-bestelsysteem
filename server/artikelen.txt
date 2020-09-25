@@ -5,7 +5,7 @@ Cola Zero  2  Alcoholvrij  20cl
 Ice Tea  2  Alcoholvrij  20cl
 Fruitsap  2  Alcoholvrij  20cl
 Koffie  2  Alcoholvrij  Met koekje, melk en suiker
-Thee  2  Alcoholvrij  Met koekje, melk en suiker
+Thee  2  Alcoholvrij  Met koekje, melk en suiker  Gewoon Rozebottel Kamille Munt
 Maes 0.0  2  Alcoholvrij  25cl
 Sportzot  3  Alcoholvrij  33cl
 Mocktail  5  Alcoholvrij  33cl
@@ -34,7 +34,7 @@ Rosé Wijn (Glas)  3  Wijn  15cl ?%
 Rosé Wijn (Fles)  12  Wijn  75cl ?%
 Rode Wijn (Glas)  3  Wijn  15cl ?%
 Rode Wijn (Fles)  12  Wijn  75cl ?%
-Ijsje  2  Eten  
+Ijsje  2  Eten    Cornetto Waterijs
 Mini Loempia's  3  Eten  5 stuks
 Pizza Baguettes  3  Eten  2 stuks
 Lookbrood  3  Eten  

@@ -229,6 +229,11 @@ populateList = function (artikelen) {
   let child = document.createElement("h1");
   child.innerHTML = "Tafel " + tafel + ": Bestelling";
   parent.appendChild(child);
+
+  let link = document.createElement("a");
+  link.setAttribute("href", "../html/sponsors.html");
+  link.innerHTML = "Wij danken al onze sponsors!...";
+  parent.appendChild(link);
   for (let i = 0; i < categories.length; i++) {
     let child = document.createElement("h1");
     child.innerHTML = categories[i];
