@@ -25,6 +25,17 @@ class Bestellingcontroller {
     return this._artikelen;
   }
 
+  addBestellingAuth(data, k1, k2){
+    if (data.controle == (k1 % data.tafel) * k2) {
+      this.addBestelling(data);
+      return {status: "OK"}
+    } else {
+      return {status: "NOK",
+              reason: "Code onjuist"
+            };
+    }  
+  }
+
   addBestelling(data) {
     if (data == null) {
       console.log("Error: null");

@@ -3,6 +3,7 @@ const express = require("express");
 const socketIO = require("socket.io");
 const path = require("path");
 const fs = require("fs");
+const bodyParser = require('body-parser');
 const bestellingcontroller = require("./bestellingcontroller.js")
   .Bestellingcontroller;
 
@@ -28,6 +29,17 @@ fs.readFile("server/artikelen.txt", "utf8", (err, data) => {
 // Start server
 const server = express()
   .get("/", (req, res) => res.sendFile(path.resolve("client/html/index.html")))
+  .get("/artikelen", function (req, res){
+    res.json(datawrapper.getArtikelen())
+  })
+  .use(bodyParser.json())
+  .post('/bestel',(req,res) => {
+    res.json(datawrapper.addBestellingAuth(req.body, pkey1, pkey2));
+    io.to("observer").emit("servermessage", {
+      data: datawrapper.getBestellingen(),
+      code: code,
+    });
+  })
   .use(express.static(path.resolve("client")))
   .listen(PORT, () => console.log("Listening on localhost:" + PORT));
 
