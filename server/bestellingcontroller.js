@@ -26,9 +26,11 @@ class Bestellingcontroller {
   }
 
   addBestellingAuth(data, k1, k2){
+    console.log(data)
     if (data.controle == (k1 % data.tafel) * k2) {
       this.addBestelling(data);
-      return {status: "OK"}
+      return {status: "OK",
+    reason: ""}
     } else {
       return {status: "NOK",
               reason: "Code onjuist"
