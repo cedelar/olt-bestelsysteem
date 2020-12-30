@@ -33,7 +33,7 @@ class Bestellingcontroller {
     reason: ""}
     } else {
       return {status: "NOK",
-              reason: "Code onjuist"
+              reason: "Ongeldige controlecode. Gelieve een correcte QR code te scannen"
             };
     }  
   }
